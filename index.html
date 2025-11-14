@@ -221,3 +221,168 @@
   <script src="script.js"></script>
 </body>
 </html>
+<!-- ============================ -->
+<!--           FAQ SECTION        -->
+<!-- ============================ -->
+
+<section id="faq" class="faq-section" style="padding: 80px 0; background-color: #F4EDE4;">
+  <div class="container">
+    <h2 class="faq-title" style="
+      font-size: 42px;
+      font-weight: 600;
+      color: #0A1A2A;
+      margin-bottom: 40px;
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+    ">
+      Perguntas Frequentes
+    </h2>
+
+    <!-- FAQ ITEM -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Já tenho recepcionista no consultório. Como uma assistente virtual pode me ajudar?
+        <span class="arrow">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          A recepcionista cuida da recepção e das demandas presenciais. Eu entro para organizar toda a parte digital:
+          atendimento online, gestão de agenda, e-mails, processos e suporte administrativo remoto. Assim, seu consultório
+          ganha eficiência, reduz gargalos e você tem mais clareza da rotina.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ ITEM -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Assistente virtual é igual a funcionária CLT?
+        <span class="arrow">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Não. Meu trabalho é realizado como <strong>prestedora de serviços PJ</strong>, com contrato de prestação de serviços,
+          sem vínculo empregatício. Isso reduz custos fixos, aumenta a flexibilidade e permite adequar o serviço conforme
+          a demanda do seu consultório ou empresa.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ ITEM -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Como funciona o processo de contratação?
+        <span class="arrow">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Primeiro fazemos uma reunião para entender o momento do seu negócio, suas dores e prioridades.
+          A partir disso, apresento as possibilidades de atuação, alinhamos expectativas e, com tudo claro,
+          seguimos com um contrato de prestação de serviços e início da parceria.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ ITEM -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Quais atividades você pode assumir para mim?
+        <span class="arrow">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Atendimento aos seus pacientes/clientes, gerenciamento de e-mails, gestão de agenda, suporte administrativo,
+          criação de processos, confirmação de consultas, agendamentos, foco em vendas, follow-ups para que nenhum lead esfrie,
+          criação de planilhas para gestão de leads e controle de entradas e saídas, criação de script de atendimento de alta
+          conversão e muito mais — tudo moldado para otimizar sua rotina profissional.
+        </p>
+      </div>
+    </div>
+
+    <!-- FAQ ITEM -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Qual é o investimento para ter uma parceira de verdade com você?
+        <span class="arrow">+</span>
+      </button>
+      <div class="faq-answer">
+        <p>
+          Após nossa reunião inicial, em que vamos nos conhecer e onde apresento minha forma de trabalho,
+          mostro os pacotes de baixa, média e alta demanda que normalmente os clientes fecham. Depois disso,
+          envio uma proposta comercial personalizada, ajustada às demandas específicas que você precisa.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================ -->
+<!-- FAKE CSS (usa estilos do site) -->
+<!-- ============================ -->
+
+<style>
+  .faq-item {
+    background: white;
+    border-radius: 10px;
+    padding: 0;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 20px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #0A1A2A;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .faq-question:hover {
+    background: #f3f3f3;
+  }
+
+  .faq-answer {
+    display: none;
+    padding: 0 25px 20px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .arrow {
+    font-size: 26px;
+    transition: 0.3s;
+  }
+
+  .faq-item.active .arrow {
+    transform: rotate(45deg);
+  }
+
+  .faq-item.active .faq-answer {
+    display: block;
+  }
+</style>
+
+<!-- ============================ -->
+<!--           FAQ JS             -->
+<!-- ============================ -->
+
+<script>
+  document.querySelectorAll(".faq-question").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const item = btn.parentElement;
+      item.classList.toggle("active");
+    });
+  });
+</script>
