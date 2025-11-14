@@ -1,52 +1,223 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VirtuAle - Assistente Virtual</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VirtuAle - Assistente virtual</title>
+
+  <!-- Fontes Google, no estilo das suas artes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- TOPO / MENU -->
+  <header class="topo">
+    <div class="topo-inner">
+      <div class="logo-area">
+        <!-- Se quiser usar sua logo, envie o arquivo com o nome abaixo -->
+        <img src="logo-virtuale.png" alt="Logo VirtuAle" class="logo">
+        <div class="marca-texto">
+          <span class="marca">VirtuAle</span>
+          <span class="submarca">Assistente virtual</span>
+        </div>
+      </div>
 
-    <header>
-        <img src="logo.png" alt="Logo VirtuAle">
-        <h1>VirtuAle Assistente Virtual</h1>
-        <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
+      <nav class="nav">
+        <a href="#oque-eu-resolvo">O que eu resolvo</a>
+        <a href="#dor">Para quem é</a>
+        <a href="#sobre">Sobre mim</a>
+        <a href="#contato" class="btn-nav">Contato</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="hero">
-        <h2>Atendimento e suporte administrativo para você focar no que traz resultado.</h2>
-        <p>Eu cuido do atendimento, organização e prazos da sua rotina.</p>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-conteudo">
+        <p class="hero-selo">Atendimento & suporte administrativo</p>
+        <h1>Deixa eu cuidar da sua rotina<br>para você cuidar dos resultados.</h1>
+        <p class="hero-texto">
+          Eu organizo e administro <strong>e-mails, prazos, tarefas e atendimentos</strong>
+          para você parar de viver apagando incêndio e voltar a ter espaço mental.
+        </p>
+
+        <div class="hero-botoes">
+          <a href="https://wa.me/55SEU_NUMERO_WHATSAPP" target="_blank" class="btn-principal">
+            Falar comigo no WhatsApp
+          </a>
+          <a href="https://instagram.com/SEU_INSTAGRAM" target="_blank" class="btn-secundario">
+            Ver conteúdos no Instagram
+          </a>
+        </div>
+
+        <p class="hero-legenda">
+          Organização é o melhor presente que você pode dar para a sua versão de amanhã.
+        </p>
+      </div>
+
+      <!-- Opcional: coloque uma foto sua com esse nome de arquivo -->
+      <div class="hero-foto">
+        <img src="foto-ale-hero.png" alt="Alessandra Freire - Assistente virtual">
+      </div>
     </section>
 
-    <section id="sobre">
-        <h2>Sobre a VirtuAle</h2>
-        <p>A VirtuAle nasceu para facilitar sua rotina com atendimento profissional e estratégico.</p>
+    <!-- O QUE EU RESOLVO -->
+    <section id="oque-eu-resolvo" class="secao secao-escura">
+      <div class="secao-inner">
+        <h2>O que eu <span class="destaque-it">resolvo</span> (de verdade) como sua assistente virtual:</h2>
+
+        <div class="cards-lista">
+          <article class="card-item">
+            <span class="bolinha">1</span>
+            <p><strong>Cuido</strong> dos seus e-mails, mensagens, prazos e documentos.</p>
+          </article>
+
+          <article class="card-item">
+            <span class="bolinha">2</span>
+            <p><strong>Crio</strong> padrões, checklists e centralizo informações.</p>
+          </article>
+
+          <article class="card-item">
+            <span class="bolinha">3</span>
+            <p><strong>Acompanho</strong> tarefas, entregas e comunicações.</p>
+          </article>
+
+          <article class="card-item">
+            <span class="bolinha">4</span>
+            <p><strong>Filtro</strong> prioridades, faço follow ups e desenvolvo fluxos para reduzir retrabalho.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="servicos">
-        <h2>O que eu faço por você</h2>
-        <ul>
-            <li>Atendimento</li>
-            <li>Gestão de e-mails e prazos</li>
-            <li>Criação de checklists e processos</li>
-            <li>Acompanhamento de entregas</li>
-            <li>Priorização e follow ups estratégicos</li>
-        </ul>
+    <!-- PARA QUEM É / DOR -->
+    <section id="dor" class="secao">
+      <div class="secao-inner secao-dupla">
+        <div class="bloco-texto">
+          <h2>Delegar não é abrir mão,<br>é abrir espaço.</h2>
+          <p>Talvez seja a hora de ter uma assistente virtual se você:</p>
+          <ul class="lista-pontos">
+            <li>Vive com a sensação de estar “devendo algo pra alguém”.</li>
+            <li>Termina o dia cansada, mas sem saber exatamente o que fez.</li>
+            <li>Demora em tarefas simples porque sempre falta contexto ou o arquivo certo.</li>
+            <li>Tem um calendário cheio, mas pouco tempo para o que realmente importa.</li>
+          </ul>
+        </div>
+
+        <div class="bloco-card-dor">
+          <h3>O que realmente causa burnout?</h3>
+          <ul>
+            <li>Falta de estrutura</li>
+            <li>Acúmulo invisível</li>
+            <li>Falta de suporte administrativo real</li>
+            <li>Ausência de limites</li>
+            <li>Gestão emocional sobrecarregada</li>
+          </ul>
+          <p class="miolo">
+            No centro de tudo: <strong>trabalho demais + falta de tempo</strong>.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section id="contato">
-        <h2>Vamos conversar?</h2>
-        <p>E-mail: <a href="mailto:seuemail@exemplo.com">seuemail@exemplo.com</a></p>
+    <!-- FRASE FORTE -->
+    <section class="secao secao-escura frase-forte">
+      <div class="secao-inner">
+        <p>
+          Apagar incêndio faz parte. Ser a única pessoa com o extintor na mão o tempo todo, <span class="negrito">não.</span>
+        </p>
+      </div>
     </section>
 
-    <footer>
-        <p>© 2025 - VirtuAle - Assistente virtual</p>
-    </footer>
+    <!-- SOBRE MIM -->
+    <section id="sobre" class="secao">
+      <div class="secao-inner secao-dupla">
+        <div class="bloco-texto">
+          <h2>Quem é a profissional por trás da VirtuAle?</h2>
+          <p>
+            Trabalhei anos em CLT, morei dois anos na Austrália e aprendi na prática a
+            <strong>me adaptar, resolver problemas e entregar resultado</strong>
+            com autonomia e eficiência.
+          </p>
+          <p>
+            Há mais de dois anos atuo como <strong>assistente virtual certificada</strong> e uso tudo o que aprendi
+            para ajudar outros profissionais a se organizarem, ganharem tempo e focarem no que realmente importa.
+          </p>
+          <p>
+            Meu trabalho é unir <strong>organização, estratégia e cuidado</strong> com o seu negócio, para que você não
+            precise fazer tudo sozinha.
+          </p>
+        </div>
 
+        <div class="bloco-sobre-foto">
+          <!-- Opcional: troque pela sua foto com o mesmo nome -->
+          <img src="foto-ale-sobre.png" alt="Foto de Alessandra Freire">
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO FUNCIONA NA PRÁTICA -->
+    <section class="secao secao-clara">
+      <div class="secao-inner">
+        <h2>Como funciona na prática</h2>
+
+        <div class="passos">
+          <article class="passo">
+            <h3>1. Conversa inicial</h3>
+            <p>Entendo sua rotina, suas dores e o que hoje está tirando sua energia e tempo.</p>
+          </article>
+          <article class="passo">
+            <h3>2. Organização & fluxos</h3>
+            <p>Crio padrões, checklists, processos e prioridades para tudo ficar claro e visível.</p>
+          </article>
+          <article class="passo">
+            <h3>3. Execução contínua</h3>
+            <p>Assumo as tarefas combinadas, faço follow ups e te mantenho atualizada, sem você precisar pedir.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="secao secao-escura contato">
+      <div class="secao-inner">
+        <h2>Pronta para abrir espaço na sua agenda e na sua cabeça?</h2>
+        <p>
+          Me chama para entender o que está pesando na sua rotina hoje e ver como a VirtuAle pode te apoiar.
+        </p>
+
+        <div class="contato-grid">
+          <div class="contato-item">
+            <span class="label">WhatsApp</span>
+            <a href="https://wa.me/55SEU_NUMERO_WHATSAPP" target="_blank" class="contato-link">
+              Clique para conversar
+            </a>
+          </div>
+
+          <div class="contato-item">
+            <span class="label">E-mail</span>
+            <a href="mailto:seuemail@exemplo.com" class="contato-link">
+              seuemail@exemplo.com
+            </a>
+          </div>
+
+          <div class="contato-item">
+            <span class="label">Instagram</span>
+            <a href="https://instagram.com/SEU_INSTAGRAM" target="_blank" class="contato-link">
+              @SEU_INSTAGRAM
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>© 2025 – VirtuAle · Assistente virtual</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
