@@ -124,7 +124,12 @@
 
     /* depoimentos */
     .depoimentos .grade{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-    .depo{background:var(--branco);padding:36px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;border:2px dashed var(--linha)}
+    .depo{background:var(--branco);padding:36px;display:flex;flex-direction:column;justify-content:space-between;gap:28px;border-top:3px solid var(--marinho)}
+    .depo blockquote::before{content:"“";display:block;font-size:64px;line-height:.6;margin-bottom:8px;font-style:normal}
+    figure{margin:0}
+    .depo-paciente{margin-top:28px;background:var(--marinho);color:var(--branco);padding:32px 40px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 40px}
+    .depo-paciente blockquote{margin:0;font-family:var(--serif);font-size:30px;font-style:italic;line-height:1.2;flex:1 1 420px}
+    .depo-paciente span{font-size:14px;color:var(--suave)}
     .depo blockquote{margin:0;font-family:var(--serif);font-size:25px;line-height:1.25;font-style:italic}
     .depo .autor{font-size:14px;color:var(--texto)}
     .depo .autor b{display:block;color:var(--marinho);font-size:15px}
@@ -293,10 +298,11 @@
       <div class="inner">
         <div class="titulo-secao"><p class="kicker">Quem já trabalha comigo</p><h2>O que dizem <em>os meus clientes.</em></h2></div>
         <div class="grade">
-          <figure class="depo"><blockquote>[Depoimento 1: cole aqui o texto do feedback do cliente.]</blockquote><figcaption class="autor"><b>[Nome do médico]</b>[Especialidade · Cidade]</figcaption></figure>
-          <figure class="depo"><blockquote>[Depoimento 2: de preferência, com um resultado concreto, como menos faltas ou mais tempo livre.]</blockquote><figcaption class="autor"><b>[Nome do médico]</b>[Especialidade · Cidade]</figcaption></figure>
-          <figure class="depo"><blockquote>[Depoimento 3: pode ser um trecho de um print de WhatsApp, com autorização.]</blockquote><figcaption class="autor"><b>[Nome do médico]</b>[Especialidade · Cidade]</figcaption></figure>
+          <figure class="depo"><blockquote>Quando você falou que o faturamento aumenta depois que te contrata… eu posso provar que é verdade: dois meses seguidos.</blockquote><figcaption class="autor"><b>Dra. Tatiana</b>Endocrinologista</figcaption></figure>
+          <figure class="depo"><blockquote>Encerramos o mês muito bem, e não falo só financeiramente. Teve reconhecimento de pacientes e de outros colegas. Estou com 24 avaliações 5 estrelas no Google. Você é parte disso tudo.</blockquote><figcaption class="autor"><b>Dra. Sarah K.</b>Psiquiatra</figcaption></figure>
+          <figure class="depo"><blockquote>Era o que eu estava buscando: alguém organizada e rápida com as demandas. Essa semana tive muitas intercorrências, mas fiquei tranquila de saber que tinha uma pessoa comigo, cuidando do que antes eu faria sozinha.</blockquote><figcaption class="autor"><b>Michelle</b>Personal trainer</figcaption></figure>
         </div>
+        <figure class="depo-paciente"><blockquote>“A prontidão e a atenção no atendimento me fizeram decidir agendar a consulta aqui.”</blockquote><span>Paciente de uma das minhas clientes, ao marcar a primeira consulta</span></figure>
       </div>
     </section>
 
