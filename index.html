@@ -57,7 +57,8 @@
     .topo{position:sticky;top:0;z-index:10;background:rgba(238,238,238,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--linha)}
     .topo .inner{display:flex;align-items:center;justify-content:space-between;height:76px}
     .marca-area{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .logo{height:44px;width:auto}
+    .logo{height:46px;width:auto}
+    @media (max-width:900px){.logo{height:30px}.nav .btn{min-height:40px;padding:8px 14px;font-size:13px;white-space:nowrap}.topo .inner{gap:12px}}
     .marca{display:flex;flex-direction:column;line-height:1.1;text-decoration:none}
     .marca b{font-family:var(--serif);font-size:30px;font-weight:600}
     .marca span{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--texto)}
@@ -84,6 +85,24 @@
     .dor ul{list-style:none;margin:0;padding:0;border-top:1px solid #3B5475}
     .dor li{padding:22px 0;border-bottom:1px solid #3B5475;font-size:18px;display:flex;gap:18px}
     .dor li b{font-family:var(--serif);font-size:30px;font-weight:500;line-height:1;min-width:34px;color:var(--suave)}
+
+    /* método FLUIR */
+    .metodo .titulo-secao{max-width:780px}
+    .fluir{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+    .letra{background:var(--branco);padding:32px 24px 28px;border-top:3px solid var(--marinho)}
+    .letra b{display:block;font-family:var(--serif);font-size:88px;line-height:.85;font-weight:600;margin-bottom:18px}
+    .letra h3{font-family:var(--sans);font-size:17px;font-weight:600;line-height:1.3;margin:0 0 8px}
+    .letra p{margin:0;font-size:14.5px;color:var(--texto);line-height:1.5}
+
+    /* diagnóstico */
+    .diag{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;text-align:left;max-width:1040px;margin:0 auto}
+    .diag ul{list-style:none;margin:28px 0 0;padding:0}
+    .diag li{padding:12px 0;border-bottom:1px solid #3B5475;color:var(--branco)}
+    .diag li::before{content:"✓";margin-right:12px;color:var(--suave)}
+    .cartao-vagas{background:var(--branco);color:var(--marinho);padding:40px;text-align:center}
+    .cartao-vagas .tag{display:inline-block;border:1.5px solid var(--marinho);padding:6px 14px;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px}
+    .final .cartao-vagas p{color:var(--texto);font-size:16px;margin:0 0 28px}
+    .cartao-vagas .btn{width:100%}
 
     /* serviços */
     .titulo-secao{max-width:720px;margin-bottom:56px}
@@ -170,7 +189,9 @@
       .hero .inner,.dor .inner,.quem .inner,.como .inner,.sigilo .inner,.sobre .inner{grid-template-columns:1fr;gap:40px}
       .hero .selos{padding-bottom:0}
       .hero-foto img{height:440px}
-      .grade-servicos,.depoimentos .grade,.sigilo ul{grid-template-columns:1fr}
+      .grade-servicos,.depoimentos .grade,.sigilo ul,.fluir,.diag{grid-template-columns:1fr}
+      .letra{display:grid;grid-template-columns:64px 1fr;column-gap:16px;padding:22px}
+      .letra b{grid-row:span 2;font-size:64px;margin:0}
       .servico{padding:30px 24px}
       .como img,.sobre img{height:420px}
       .sobre .foto{order:-1}
@@ -184,13 +205,13 @@
 
   <header class="topo">
     <div class="inner">
-      <a href="#" class="marca-area"><img src="logo-virtuale.png" alt="Logo VirtuAle" class="logo"><span class="marca"><b>VirtuAle</b><span>Secretária remota para médicos</span></span></a>
+      <a href="#" class="marca-area"><img src="logo-virtuale.png" alt="VirtuAle · Secretária remota para médicos" class="logo"></a>
       <nav class="nav">
         <a href="#servicos">Serviços</a>
-        <a href="#como-funciona">Como funciona</a>
+        <a href="#metodo">Método FLUIR</a>
         <a href="#sobre">Sobre mim</a>
         <a href="#faq">Dúvidas</a>
-        <a class="btn" href="https://api.whatsapp.com/message/OKB5B42VE4STC1?autoload=1&app_absent=0" target="_blank" rel="noopener">Agendar conversa</a>
+        <a class="btn" href="https://api.whatsapp.com/message/OKB5B42VE4STC1?autoload=1&app_absent=0" target="_blank" rel="noopener">Diagnóstico gratuito</a>
       </nav>
     </div>
   </header>
@@ -204,7 +225,7 @@
           <h1>Enquanto você atende, <em>eu cuido do resto.</em></h1>
           <p class="sub">WhatsApp, agenda, confirmações e retornos do seu consultório nas mãos de uma pessoa de verdade, para nenhum paciente ficar sem resposta.</p>
           <div class="acoes">
-            <a class="btn" href="https://api.whatsapp.com/message/OKB5B42VE4STC1?autoload=1&app_absent=0" target="_blank" rel="noopener">Agendar conversa de 15 min</a>
+            <a class="btn" href="https://api.whatsapp.com/message/OKB5B42VE4STC1?autoload=1&app_absent=0" target="_blank" rel="noopener">Diagnóstico gratuito de 15 min</a>
             <a class="btn btn-linha" href="#servicos">Ver serviços</a>
           </div>
           <div class="selos"><span>Atendimento humano</span><span>Sigilo dos dados</span><span>Sem vínculo CLT</span></div>
@@ -222,6 +243,24 @@
           <li><b>2</b>A confirmação fica para depois, e a falta vira um horário perdido.</li>
           <li><b>3</b>O celular do consultório vai junto para o jantar, todos os dias.</li>
         </ul>
+      </div>
+    </section>
+
+    <!-- MÉTODO FLUIR -->
+    <section id="metodo" class="metodo">
+      <div class="inner">
+        <div class="titulo-secao">
+          <p class="kicker">Como eu trabalho</p>
+          <h2>Método FLUIR: <em>uma rotina que flui de verdade.</em></h2>
+          <p>Atendimento de alta qualidade, agenda sem espaços vazios e uma rotina mais simples e leve para você.</p>
+        </div>
+        <div class="fluir">
+          <div class="letra"><b>F</b><h3>Fazer cada paciente se sentir bem atendido</h3><p>Acolhimento humano desde a primeira mensagem.</p></div>
+          <div class="letra"><b>L</b><h3>Lotar a agenda com confirmações e encaixes</h3><p>Lista de espera ativa para nenhum horário ficar vago.</p></div>
+          <div class="letra"><b>U</b><h3>Unificar processos e mensagens</h3><p>Fluxos claros e respostas padronizadas no seu tom.</p></div>
+          <div class="letra"><b>I</b><h3>Informação organizada para o médico</h3><p>Resumo do dia e controles sempre atualizados.</p></div>
+          <div class="letra"><b>R</b><h3>Retomar retornos e interessados</h3><p>Follow-up de quem perguntou e de quem precisa voltar.</p></div>
+        </div>
       </div>
     </section>
 
@@ -272,7 +311,7 @@
           <p class="kicker">Como funciona</p>
           <h2>Em poucos dias, <em>sua agenda em boas mãos.</em></h2>
           <div class="passos">
-            <div class="passo"><div><h3>Conversa inicial</h3><p>Em 15 minutos, entendo como você atende hoje e onde estão os gargalos.</p></div></div>
+            <div class="passo"><div><h3>Diagnóstico de agenda gratuito</h3><p>Em 15 minutos, entendo como você atende hoje e onde estão os gargalos.</p></div></div>
             <div class="passo"><div><h3>Organização e regras</h3><p>Combinamos horários, valores, mensagens e o que precisa chegar até você.</p></div></div>
             <div class="passo"><div><h3>Execução com acompanhamento</h3><p>Assumo o atendimento e te mando um resumo do dia, sem você precisar pedir.</p></div></div>
           </div>
@@ -329,7 +368,7 @@
         <details><summary>A secretária remota é igual a uma funcionária CLT?</summary><p>Não. Trabalho como prestadora de serviços PJ, com contrato de prestação de serviços e sem vínculo empregatício. Você não tem encargos como INSS, FGTS, 13º, férias ou vale-transporte.</p></details>
         <details><summary>Meu paciente vai perceber que não é presencial?</summary><p>Ele percebe que foi bem atendido. Muitos consultórios já não têm recepcionista, e o primeiro contato do paciente hoje acontece pelo WhatsApp.</p></details>
         <details><summary>Preciso ter muita demanda para contratar?</summary><p>Não. Organizar a rotina antes de crescer é o que permite receber mais pacientes sem perder a qualidade. Há pacotes para baixa, média e alta demanda.</p></details>
-        <details><summary>Como funciona a contratação?</summary><p>Começamos com uma conversa de 15 minutos. Depois apresento as possibilidades, alinhamos expectativas e seguimos com o contrato e o início da parceria.</p></details>
+        <details><summary>Como funciona a contratação?</summary><p>Começamos com um diagnóstico de agenda gratuito, de 15 minutos. Depois apresento as possibilidades, alinhamos expectativas e seguimos com o contrato e o início da parceria.</p></details>
         <details><summary>Qual é o investimento?</summary><p>Depende da sua demanda. Depois da nossa conversa, envio uma proposta personalizada, com base nos pacotes de baixa, média e alta demanda.</p></details>
       </div>
     </section>
@@ -337,9 +376,23 @@
     <!-- 10. FINAL -->
     <section id="contato" class="escuro final">
       <div class="inner">
-        <h2>Vamos ver se faz sentido <em>para o seu consultório?</em></h2>
-        <p>Uma conversa de 15 minutos, sem compromisso, para entender como está a sua agenda hoje.</p>
-        <a class="btn btn-claro" href="https://api.whatsapp.com/message/OKB5B42VE4STC1?autoload=1&app_absent=0" target="_blank" rel="noopener">Falar comigo no WhatsApp</a>
+        <div class="diag">
+          <div>
+            <p class="kicker">Diagnóstico de agenda gratuito</p>
+            <h2 style="margin:0">Descubra onde o seu consultório <em>está perdendo pacientes.</em></h2>
+            <ul>
+              <li>Como os pacientes estão sendo atendidos hoje</li>
+              <li>Onde a agenda está ficando com buracos</li>
+              <li>O que pode sair da sua rotina já no primeiro mês</li>
+            </ul>
+          </div>
+          <div class="cartao-vagas">
+            <span class="tag">Vagas limitadas</span>
+            <h3 style="font-size:40px;margin:0 0 14px">15 minutos, <em>sem compromisso.</em></h3>
+            <p>Abro poucas vagas por mês para manter a qualidade do atendimento a cada cliente.</p>
+            <a class="btn" href="https://api.whatsapp.com/message/OKB5B42VE4STC1?autoload=1&app_absent=0" target="_blank" rel="noopener">Quero meu diagnóstico</a>
+          </div>
+        </div>
         <div class="contatos">
           <a href="https://www.instagram.com/afreire.secretariaremota/" target="_blank" rel="noopener">Instagram: @afreire.secretariaremota</a>
           <a href="mailto:alessandradfreire@gmail.com">alessandradfreire@gmail.com</a>
